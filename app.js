@@ -66,7 +66,7 @@ app.use(function(req, res, next) {
 *
 **/
 
-app.post('/jekyll-discuss/comments', function (req, res) {
+app.post('/comments', function (req, res) {
 	/**
 	*
 	* Expected data on POST:
@@ -191,7 +191,7 @@ app.post('/jekyll-discuss/comments', function (req, res) {
 *
 **/
 
-app.get('/jekyll-discuss/unsubscribe/:id', function (req, res) {
+app.get('/unsubscribe/:id', function (req, res) {
 	subscriptions.remove(req.params.id, function (numRemoved) {
 		if (numRemoved > 0) {
 			res.send('Subscription removed!');
