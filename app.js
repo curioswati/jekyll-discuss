@@ -21,7 +21,7 @@ var md5 = require('MD5');
 var bodyParser = require('body-parser');
 var marked = require('marked');
 var subscriptions = require('./lib/subscriptions')(config.SUBSCRIPTIONS_DATABASE);
-var mailman = require('./lib/mailman')(config.MAILGUN_KEY, config.MAILGUN_DOMAIN, config.MAILGUN_FROM);
+var mailman = require('./lib/mailman')(config.SENDGRID_KEY, config.SENDGRID_FROM);
 var helpers = require('./lib/helpers');
 
 /*-----  End of Module loading  ------*/
