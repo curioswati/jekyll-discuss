@@ -157,6 +157,7 @@ app.post('/comments', function (req, res) {
 			var data = {
 				title: parsedData['post-title'],
 				link: parsedData['post-url'],
+				message: parsedData['message'],
 				commenter: parsedData['name']
 			};
 
