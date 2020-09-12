@@ -158,7 +158,8 @@ app.post('/comments', function (req, res) {
 				title: parsedData['post-title'],
 				link: parsedData['post-url'],
 				message: parsedData['message'],
-				commenter: parsedData['name']
+				commenter: parsedData['name'],
+                replyTo: parsedData['email']
 			};
 
 			mailman.send('admin-new-comment', config.SUBSCRIPTIONS_NOTIFY_ALL, data, function (body, error) {
